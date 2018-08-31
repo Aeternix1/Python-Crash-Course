@@ -19,3 +19,17 @@ print("Hello, " + full_name.title() + "!")
 #Adding whitespace
 print("Python")
 print("\tPython\n")
+print("\tPython\n\tJava\n\tC\n")
+
+#Stripping Whitespace is really useful to remove trailing spaces
+favourite_language = '\tpython\t'
+print(favourite_language)
+favourite_language = favourite_language.rstrip() 
+print(favourite_language)
+favourite_language = favourite_language.lstrip()
+print(favourite_language)
+
+favourite_language = '\tpython\t'
+favourite_language = favourite_language.strip()
+print(favourite_language)
+
