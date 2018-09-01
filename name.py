@@ -21,7 +21,9 @@ print("Python")
 print("\tPython\n")
 print("\tPython\n\tJava\n\tC\n")
 
-#Stripping Whitespace is really useful to remove trailing spaces
+#Stripping Whitespace is really useful to remove whitespace when needed
+#The stripping process is used to deal with user input
+
 favourite_language = '\tpython\t'
 print(favourite_language)
 favourite_language = favourite_language.rstrip() 
@@ -32,4 +34,5 @@ print(favourite_language)
 favourite_language = '\tpython\t'
 favourite_language = favourite_language.strip()
 print(favourite_language)
+
 
