@@ -1,4 +1,4 @@
-#Lists should be plural (add s cunt)
+#Lists should be plural (add s)
 
 bicycles = ['trek', 'cannondale', 'redline', 'specialized']
 print(bicycles)
