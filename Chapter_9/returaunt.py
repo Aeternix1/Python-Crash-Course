@@ -1,11 +1,13 @@
 #Make a class called restaurant
 #Store two attributes a restaurant name and cusine type
+#Add an additional attribute called numbers served to the resturant class
 
 class Restaurant():
 
     def __init__(self, name, cuisine):
         self.name = name
         self.cuisine = cuisine
+        self.numbers_served = 0
 
     def describe_restaurant(self):
         print("The restaurant is called " + self.name.title()+ " " + " and serves " + \
@@ -13,6 +15,17 @@ self.cuisine)
 
     def open_restaurant(self):
         print("The restaurant is open")
+
+    def set_number_served(self, served):
+        """Sets the number of people served in the restaurant"""
+        if (served >= self.numbers_served):
+            self.numbers_served = served
+        else:
+            print("You're already serving more than that!")
+
+    def increment_number_served(self, served):
+        """Increments the number of people served"""
+        self.numbers_served += served
 
 jaggis = Restaurant("jaggis", "indian")
 
@@ -27,3 +40,5 @@ mcdonalds = Restaurant("mcdonalds", "burgers")
 
 mcdonalds.describe_restaurant()
 hings.describe_restaurant()
+
+
