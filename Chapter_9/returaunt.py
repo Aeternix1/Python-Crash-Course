@@ -31,22 +31,41 @@ self.cuisine)
         """Shows the number of people served"""
         print(self.name + " is currently serving " + str(self.numbers_served))
 
-jaggis = Restaurant("jaggis", "indian")
+class IceCreamStand(Restaurant):
+    def __init__(self, name, cuisine):
+        super().__init__(name, cuisine)
+        self.flavours = []
+    
+    def show_flavours(self):
+        for flavour in self.flavours:
+            print(flavour.title())
 
-print(jaggis.name.title())
-print(jaggis.cuisine.title())
+    def add_flavour(self, flavour):
+        self.flavours.append(flavour)
 
-jaggis.describe_restaurant()
-jaggis.open_restaurant()
+# jaggis = Restaurant("jaggis", "indian")
 
-hings = Restaurant("hings", "chinese")
-mcdonalds = Restaurant("mcdonalds", "burgers")
+# print(jaggis.name.title())
+# print(jaggis.cuisine.title())
 
-mcdonalds.describe_restaurant()
-hings.describe_restaurant()
+# jaggis.describe_restaurant()
+# jaggis.open_restaurant()
 
-jaggis.set_number_served(10)
-jaggis.show_number_served()
-jaggis.increment_number_served(25)
-jaggis.show_number_served()
+# hings = Restaurant("hings", "chinese")
+# mcdonalds = Restaurant("mcdonalds", "burgers")
 
+# mcdonalds.describe_restaurant()
+# hings.describe_restaurant()
+
+# jaggis.set_number_served(10)
+# jaggis.show_number_served()
+# jaggis.increment_number_served(25)
+# jaggis.show_number_served()
+
+messina = IceCreamStand('messina', 'ice-cream')
+messina.show_flavours()
+messina.add_flavour("chocolate")
+messina.add_flavour("vanilla")
+messina.add_flavour("strawberry")
+messina.open_restaurant()
+messina.show_flavours()

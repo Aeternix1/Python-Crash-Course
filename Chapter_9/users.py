@@ -32,17 +32,31 @@ class User():
         """Reset login attempts"""
         self.login_attempts = 0 
 
-ajay = User('ajay', 'kallukalam', 22, '23rd of September')
+class Admin(User):
+    def __init__(self,first_name, last_name, age, dob):
+        super().__init__(first_name, last_name, age, dob)
+        self.privileges = ["can add post", "can delete post"\
+                          "can ban user"]
 
-ajay.describe_user()
-ajay.greet_user()
+    def show_privileges(self):
+        for privilege in self.privileges:
+            print(privilege)
 
-ajay.view_login_attempts()
-ajay.increment_login_attempts()
-ajay.increment_login_attempts()
-ajay.view_login_attempts()
+# ajay = User('ajay', 'kallukalam', 22, '23rd of September')
 
-ajay.reset_login_attempts()
-ajay.view_login_attempts()
+# ajay.describe_user()
+# ajay.greet_user()
+
+# ajay.view_login_attempts()
+# ajay.increment_login_attempts()
+# ajay.increment_login_attempts()
+# ajay.view_login_attempts()
+
+# ajay.reset_login_attempts()
+# ajay.view_login_attempts()
+
+
+ajay = Admin('ajay', 'kallukalam', 22, '23rd of September')
+ajay.show_privileges()
 
 
