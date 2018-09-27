@@ -13,6 +13,7 @@ class Car():
         #A default attribute is one we specify by ourselves 
         #Gets run when you use the init method
         self.odometer_reading = 0
+        self.fuel = 0
 
     def get_descriptive_name(self):
         """Return a neatly formatted descriptive name"""
@@ -34,6 +35,9 @@ class Car():
         """Add the given amount to the odometer reading"""
         self.odometer_reading += mileage
 
+    def add_fuel(self, petrol):
+        self.fuel += petrol
+
 #Making an electric car class that does everything a car does AND MORE
 
 class ElectricCar(Car):
@@ -51,8 +55,13 @@ class ElectricCar(Car):
     def describe_battery(self):
         """Print a statement describing the battery size"""
         print("This car has a " + str(self.battery_size) + "-kWh battery.")
+
+    def add_fuel(self):
+        """Electric cars don't have gas tanks."""
+        print("This car doesn't have a gas tank!")
     
 my_tesla = ElectricCar('tesla', 'model s', 2016)
 print(my_tesla.get_descriptive_name())
 
 my_tesla.describe_battery()
+my_tesla.add_fuel()
