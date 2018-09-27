@@ -45,7 +45,9 @@ class ElectricCar(Car):
         #any additional attributes can be defined using methods
         super().__init__(make, model, year)
         self.battery_size = 70
-    
+   
+   #When modelling the electric car you can be as detailed about
+   #Which methods and attributes best define the object
     def describe_battery(self):
         """Print a statement describing the battery size"""
         print("This car has a " + str(self.battery_size) + "-kWh battery.")
