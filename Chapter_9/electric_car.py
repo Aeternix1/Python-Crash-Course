@@ -40,6 +40,30 @@ class Car():
 
 #Making an electric car class that does everything a car does AND MORE
 
+#We can use classes(instances) as attributes for complex information
+#By placing methods in the appropriate class we tend to section the information
+#In a much more understandable way
+class Battery():
+    """A simple attempt to model a battery for an electric car"""
+    def __init__(self, battery_size=70):
+        """Initialise the batteries attributes"""
+        self.battery_size = battery_size
+
+    def describe_battery(self):
+        """Print a statement describing the batteries size."""
+        print("This car has a " + str(self.battery_size) + "-kWh battery.")
+
+    def get_range(self):
+        """Print a statement about the range this battery provides."""
+        if self.battery_size == 70:
+            range = 240
+        elif self.battery_size == 85:
+            range = 270
+
+        message = "This car can go approximately " + str(range)
+        message += " miles on a full charge." 
+        print(message)
+
 class ElectricCar(Car):
     """Represents aspects of a car, specific to electric vehicles"""
     def __init__(self, make, model, year):
@@ -48,13 +72,14 @@ class ElectricCar(Car):
         #the child class as a simple cutoff of the car
         #any additional attributes can be defined using methods
         super().__init__(make, model, year)
-        self.battery_size = 70
-   
+        self.battery = Battery()
+
+            
    #When modelling the electric car you can be as detailed about
    #Which methods and attributes best define the object
-    def describe_battery(self):
-        """Print a statement describing the battery size"""
-        print("This car has a " + str(self.battery_size) + "-kWh battery.")
+    # def describe_battery(self):
+        # """Print a statement describing the battery size"""
+        # print("This car has a " + str(self.battery_size) + "-kWh battery.")
 
     def add_fuel(self):
         """Electric cars don't have gas tanks."""
@@ -63,5 +88,8 @@ class ElectricCar(Car):
 my_tesla = ElectricCar('tesla', 'model s', 2016)
 print(my_tesla.get_descriptive_name())
 
-my_tesla.describe_battery()
+my_tesla.battery.describe_battery()
 my_tesla.add_fuel()
+my_tesla.battery.get_range()
+
+
