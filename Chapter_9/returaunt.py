@@ -26,6 +26,10 @@ self.cuisine)
     def increment_number_served(self, served):
         """Increments the number of people served"""
         self.numbers_served += served
+    
+    def show_number_served(self):
+        """Shows the number of people served"""
+        print(self.name + " is currently serving " + str(self.numbers_served))
 
 jaggis = Restaurant("jaggis", "indian")
 
@@ -41,4 +45,8 @@ mcdonalds = Restaurant("mcdonalds", "burgers")
 mcdonalds.describe_restaurant()
 hings.describe_restaurant()
 
+jaggis.set_number_served(10)
+jaggis.show_number_served()
+jaggis.increment_number_served(25)
+jaggis.show_number_served()
 
