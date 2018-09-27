@@ -41,7 +41,16 @@ class ElectricCar(Car):
     def __init__(self, make, model, year):
         """Initialize attributes of the parent class"""
         #The super method initialised the electric car class with
-        #the Car classes init method
+        #the child class as a simple cutoff of the car
+        #any additional attributes can be defined using methods
         super().__init__(make, model, year)
+        self.battery_size = 70
+    
+    def describe_battery(self):
+        """Print a statement describing the battery size"""
+        print("This car has a " + str(self.battery_size) + "-kWh battery.")
     
 my_tesla = ElectricCar('tesla', 'model s', 2016)
+print(my_tesla.get_descriptive_name())
+
+my_tesla.describe_battery()
