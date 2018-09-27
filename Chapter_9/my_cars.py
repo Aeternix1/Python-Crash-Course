@@ -14,3 +14,12 @@ print(my_beetle.get_descriptive_name())
 
 my_tesla = electric_car.ElectricCar('tesla', 'roadster', '2016')
 print(my_tesla.get_descriptive_name())
+
+
+#Don't use:
+#from module_name import *
+#FUCKING CONFUSING 
+#better use module_name.class_name syntax
+
+#You can spread out your modules by storing classes in several modules
+#
