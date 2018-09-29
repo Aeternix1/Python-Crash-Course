@@ -1,8 +1,17 @@
 import json
 
-username = input("What is your name? ")
-
+#Load the username, if it has been stored previously
+#Otherwise, prompt for the username and store it
 filename = 'username.json'
-with open(filename, 'w') as f_obj:
+try:
+    with open(filename, 'w') as f_obj:
     json.dump(username, f_obj)
-    print("We'll remember you when you come back, " + username + "!")
+except FileNotFoundError:
+    username = input("What is your name? ")
+    with open(filename, 'w') as f_obj:
+        json.dump(username, f_obj)
+        print("We'll remember you when you come back, " + username + "!")
+
+    else:
+        print("Welcome back, " + username + "!")
+
