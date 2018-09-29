@@ -8,8 +8,9 @@ def count_words(filename):
         print("You've spelt your variable wrong!")
 
     except FileNotFoundError:
-        msg = "Sorry, the file " + filename + " does not exist."
-        print(msg)
+        # msg = "Sorry, the file " + filename + " does not exist."
+        # print(msg)
+        pass
 
     #Let's count the words!
     else:
