@@ -2,5 +2,12 @@
 - unittests verifies a specific aspect of a functions behaviours
 - test case is the range of behaviours covered, full coverage is aimed to be
   achieved after deployment
+- testing a class ensures that the behaviour of the class is working well
 
+assertEqual(a, b) #Verify that a == b
+assertNotEqual(a, b) #Verify that a != b
+assertTrue(x) #Verify that x is True
+assertFalse(x) #Verify that x is False
+assertIn(item, list) #Verify that item is in list
+assertNotIn(item, list) #Verify that item is not in list
   
