@@ -1,0 +1,6 @@
+In Python you can read and write to a file fairly easily
+In Python you can append strings to a list
+In Python you can read the entire contents of a file line by line into a list
+In Python you can perform many operations on a list
+In Python you can check if a value is in a list
+In Python you can check if a value is in a dictionary
