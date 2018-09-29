@@ -13,3 +13,8 @@ try:
     print(5/0)
 except ZeroDivisionError:
     print("You can't divide by zero!")
+
+#Exceptions are usually raised for external input errors
+#Errors in syntax are internal errors
+#Whether you decide to report an error to the user depends on the purpose of
+#Your code
