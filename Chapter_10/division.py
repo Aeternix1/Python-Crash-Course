@@ -8,9 +8,15 @@ while True:
     second_number = input("\nSecond number: ")
     if second_number == 'q':
         break
-    answer = int(first_number)/int(second_number)
-    print(answer)
+    #Basically this code will catch the error if it occurs
+    #Through try, if it doesn't then it will go to else
+    try:
+        answer = int(first_number)/int(second_number)
+    except ZeroDivisionError:
+        print("You can't divide by zero")
+    else:
+        print(answer)
 
     #Current program will crash if you try to divide by zero
-    
+     
 
