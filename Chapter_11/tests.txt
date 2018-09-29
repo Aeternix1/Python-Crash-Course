@@ -1,0 +1,6 @@
+
+- unittests verifies a specific aspect of a functions behaviours
+- test case is the range of behaviours covered, full coverage is aimed to be
+  achieved after deployment
+
+  
