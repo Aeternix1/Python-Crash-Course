@@ -1,7 +1,7 @@
 import unittest
 from name_function import get_formatted_name
 
-class NameTestCase (unitest.TestCase):
+class NameTestCase (unittest.TestCase):
     """Tests for 'name_function.py'"""
 
     def test_first_last_name(self):
