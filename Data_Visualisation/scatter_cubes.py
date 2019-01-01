@@ -9,5 +9,7 @@ plt.title("Cubed Values", fontsize=14)
 plt.xlabel("Values",fontsize=10)
 plt.ylabel("Cube of values", fontsize=10)
 
-plt.scatter(x_values, y_values, s=20)
+plt.tick_params(axis='both', which='major', labelsize=14)
+
+plt.scatter(x_values, y_values, c=y_values,cmap=  s=20)
 plt.show()
