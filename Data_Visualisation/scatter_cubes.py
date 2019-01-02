@@ -11,5 +11,6 @@ plt.ylabel("Cube of values", fontsize=10)
 
 plt.tick_params(axis='both', which='major', labelsize=14)
 
-plt.scatter(x_values, y_values, c=y_values,cmap=  s=20)
+plt.scatter(x_values, y_values, c=y_values,cmap=plt.cm.Reds, edgecolor='none',
+        s=20)
 plt.show()
