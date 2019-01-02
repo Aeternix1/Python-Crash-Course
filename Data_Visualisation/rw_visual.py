@@ -4,7 +4,7 @@ from random_walk import RandomWalk
 #Generate multiple random walks
 while True:
     #Make a random walk and plot the points 
-    rw = RandomWalk(50000)
+    rw = RandomWalk(5000)
     rw.fill_walk()
    
     #Set the size of the plotting window 
@@ -12,14 +12,9 @@ while True:
 
     #Coloring the points
     point_numbers = list(range(rw.num_points))
-    plt.scatter(rw.x_values, rw.y_values, c=point_numbers, cmap=plt.cm.Blues,\
-            edgecolors='none', s=1)
+    plt.plot(rw.x_values, rw.y_values, linewidth=1)
 
     #Emphasise the first and the last points
-    plt.scatter(rw.x_values[-1], rw.y_values[-1], c='red', edgecolors='none',\
-            s=20)
-    plt.scatter(rw.x_values[0], rw.y_values[0], c='red', edgecolors='none',\
-            s=20)
     plt.show()
 
 
