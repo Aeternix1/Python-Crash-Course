@@ -23,17 +23,22 @@ with open(filename) as f:
 
     #Run through each row in the file
     for row in reader:
-        current_date = datetime.strptime(row[0], "%Y-%m-%d")
-        dates.append(current_date)
-    
-        low = int(row[3])
-        lows.append(low)
 
-        high = int(row[1])  
-        highs.append(high)
+        try:
+            current_date = datetime.strptime(row[0], "%Y-%m-%d")
+            high = int(row[1])  
+            low = int(row[3])
         
+        #If an exception is raised it will be found, and the program continues
+        #without breaking
+        except ValueError:
+            print(current_date, 'missing data')
 
-
+        else:
+            dates.append(current_date)
+            lows.append(low)
+            highs.append(high)
+            
     # print(highs)
 
 #Plot the data
