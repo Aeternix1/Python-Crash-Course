@@ -6,7 +6,7 @@ import csv
 
 
 #Store the file in filename object
-filename = 'sitka_weather_2014.csv' 
+filename = 'death_valley_2014.csv' 
 #Open the file and store the object in f
 with open(filename) as f:
     #Reader stores the object in reader variable (to use csv related functions)
@@ -39,8 +39,11 @@ with open(filename) as f:
 #Plot the data
 fig = plt.figure(dpi = 128, figsize=(10, 6))
 
-plt.plot(dates, lows, c="blue")
-plt.plot(dates, highs, c="red")
+plt.plot(dates, lows, c="blue", alpha=0.5)
+plt.plot(dates, highs, c="red", alpha=0.5)
+
+#Takes in an x-value and then two y values and shades the difference
+plt.fill_between(dates, highs, lows, facecolor="blue", alpha=0.1)
 #Draws dates diagonally
 fig.autofmt_xdate()
 
